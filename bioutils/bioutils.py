@@ -187,7 +187,8 @@ def get_dssp_fields(pdb_path, chain_id):
     pdb_id = None
     dssp_cmd = "dssp {}".format(pdb_fn)
 
-    with subprocess.Popen(dssp_cmd, shell=True, stdout=subprocess.PIPE).stdout as f:
+    with subprocess.Popen(dssp_cmd, shell=True,
+            stdout=subprocess.PIPE).stdout as f:
         aa_seq = []
         ss_seq = []
         bp1s = []
